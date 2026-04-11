@@ -5,3 +5,17 @@ body{
 #24332a, rgb(2, 3, 3));
 color: white;
 }
+
+    #gitlink{
+      background-color:rgba(240, 248, 255, 0.767) ;
+      padding: 10px;
+      background: rgb(255, 247, 247);
+      border-radius: 20px;
+    }
+
+    
+
+    #gitlink:hover{
+      background:rgb(139, 131, 131);
+    }
+
