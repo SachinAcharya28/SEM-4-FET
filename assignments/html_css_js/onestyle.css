@@ -67,3 +67,14 @@
         #para{
                 font-size: small;
         }
+#homepage
+{    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px; 
+    background: #a9abd8;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
