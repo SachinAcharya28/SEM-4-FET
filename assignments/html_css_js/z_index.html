@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .layer1{
+        position: absolute;
+        background-color: rgb(121, 36, 36);
+        display:block; 
+        width : 100px;
+        height : 478px;
+          box-shadow: 5px 10px;
+        z-index: 1;
+        top: 10px;
+        left: 50px;
+    }
+    .layer2{
+        position: relative;
+        background-color: rgb(19, 70, 19);
+        display:block; 
+        width : 500px;
+        height : 200px;
+        top:60px;
+        left:90px;
+        box-shadow: 23px;
+        z-index: 2;
+        box-shadow: 5px 10px;
 
+    }
+    .layer3{
+        position: relative;
+        background-color: rgb(148, 148, 30);
+        display:block; 
+        bottom: 30px;
+        left: 125px;
+        width : 350px;
+        height : 475px;
+        box-shadow: 23px;
+        z-index: 3;
+        box-shadow: 5px 10px;
+
+    }
+
+    .main{
+      position: relative;
+
+    }
+
+    button{
+        padding: 20px;
+        background-color: aqua;
+    }
+
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="layer1">g</div>
+        <div class="layer2">f</div>
+        <div class="layer3">k</div>
+    </div>
+    <div class="button">
+        <button id="Red">Red Layer</button>
+        <button id="Green">Green Layer</button>
+        <button id="Yellow">Yellow Layer</button>
+    </div>
+
+    <script>
+
+        let layer1=document.querySelector(".layer1");
+        let layer2=document.querySelector(".layer2");
+        let layer3=document.querySelector(".layer3");
+
+        let red=document.getElementById("Red");
+        let green=document.getElementById("Green");
+        let yellow=document.getElementById("Yellow");
+
+        function swap(e){
+    let styleE = window.getComputedStyle(e);
+    let styleLayer3 = window.getComputedStyle(layer3);
+
+    let temp = styleE.zIndex;
+    
+    e.style.zIndex = styleLayer3.zIndex;
+    layer3.style.zIndex = temp;
+        }
+
+        red.addEventListener("click",function(){
+            swap(layer1);
+        })
+        green.addEventListener("click",function(){
+            swap(layer2);
+        })
+        yellow.addEventListener("click",function(){
+            swap(layer3);
+        })
+</script>
+</body>
+
+</html>
