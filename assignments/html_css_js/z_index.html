@@ -90,25 +90,25 @@
         let green=document.getElementById("Green");
         let yellow=document.getElementById("Yellow");
 
-        function swap(e){
-    let styleE = window.getComputedStyle(e);
-    let styleLayer3 = window.getComputedStyle(layer3);
+        function bringFront(layer){
+            layer1.style.zIndex=1;
+            layer2.style.zIndex=2;
+            layer3.style.zIndex=3;
 
-    let temp = styleE.zIndex;
-    
-    e.style.zIndex = styleLayer3.zIndex;
-    layer3.style.zIndex = temp;
+            layer.style.zIndex=10;
         }
 
         red.addEventListener("click",function(){
-            swap(layer1);
-        })
+            bringFront(layer1);
+        });
+
         green.addEventListener("click",function(){
-            swap(layer2);
-        })
+            bringFront(layer2);
+        });
+
         yellow.addEventListener("click",function(){
-            swap(layer3);
-        })
+            bringFront(layer3);
+        }); 
 </script>
 </body>
 
